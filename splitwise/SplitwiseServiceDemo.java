@@ -257,7 +257,7 @@ class SplitwiseService {
     }
 }
 
-class SplitwiseServiceDemo {
+public class SplitwiseServiceDemo {
     public static void main(String[] args) {
         SplitwiseService splitwiseService = SplitwiseService.getInstance();
 
