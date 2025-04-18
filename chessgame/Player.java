@@ -7,19 +7,22 @@ public class Player {
         this.color = color;
     }
 
+    public Color getColor() {
+        return color;
+    }
+
     public void makeMove(Board board, Move move) {
         Piece piece = move.getPiece();
         int destCol = move.getDestCol();
         int destRow = move.getDestRow();
 
         if (board.isValidMove(piece, destRow, destCol)) {
-            board.setPiece(piece.getRow(), piece.getCol()null);
+            board.setPiece(piece.getRow(), piece.getCol(), null);
             board.setPiece(destRow, destCol, piece);
             piece.setRow(destRow);
             piece.setCol(destCol);
         } else {
-            throw new InvalidMoveException("Invalid move...")
+            throw new InvalidMoveException("Invalid move...");
         }
     }
-
 }

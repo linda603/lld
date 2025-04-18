@@ -1,9 +1,9 @@
 package chessgame;
 
 public abstract class Piece {
-    private Color color;
-    private int row;
-    private int col;
+    protected Color color;
+    protected int row;
+    protected int col;
 
     public Piece(Color color, int row, int col) {
         this.color = color;
@@ -32,6 +32,4 @@ public abstract class Piece {
     public void setCol(int col) {
         this.col = col;
     }
-
-    public abstract boolean canMove()
 }

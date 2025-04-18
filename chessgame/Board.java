@@ -52,4 +52,13 @@ public class Board {
         return (destPiece == null) || (destPiece.getColor() != piece.getColor() &&
                 piece.canMove(this, destRow, destCol));
     }
+
+    public boolean isCheckmate(Piece piece, int destRow, int destCol) {
+        if (piece == null || destRow < 0 || destRow > 7 || destCol < 0 || destCol > 7) {
+            return false;
+        }
+        Piece destPiece = getPiece(destRow, destCol);
+        return (destPiece instanceof King && destPiece.getColor() != piece.getColor() &&
+                piece.canMove(this, destRow, destCol) );
+    }
 }
